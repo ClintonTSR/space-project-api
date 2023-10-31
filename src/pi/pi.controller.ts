@@ -8,6 +8,7 @@ export class PiController {
 
     @Get('current')
     async getCurrentPi() {
-        return this.piService.getCurrentPi();
+        const pi = await this.piService.getCurrentPi();
+        return { pi };
     }
 }
